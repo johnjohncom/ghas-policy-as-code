@@ -1,0 +1,36 @@
+## Security Levels
+# - critical
+# - high
+# - error
+# - medium
+# - moderate
+# - low
+# - warning
+# - notes
+
+general:
+  level: error
+  remediate:
+    errors: 7
+    woarnings: 30
+    all: 90
+
+codescanning:
+  level: error
+ 
+dependabot:
+  level: high
+  remediate:
+    high: 7
+
+licensing:
+  conditions:
+    ids:
+      - GPL-2.0
+      - GPL-3.0
+      - MI*
+
+secretscanning:
+  level: all
+  remediate: 
+    critical: 7
