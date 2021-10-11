@@ -9,8 +9,8 @@
 # - warning
 # - notes
 
-# general:
-#   level: error
+general:
+  level: error
 
 codescanning:
   level: error
