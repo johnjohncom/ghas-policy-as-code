@@ -1,23 +1,23 @@
-name: Compliance
+name: Compliances
 
+# Controls when the workflow will run
 on:
-  push:
-    branches: [ main, master, develop, release-* ]
+  # Triggers the workflow on push or pull request events but only for the main branch
+ 
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# A workflow run is made up of one or more jobs that can run sequentially or in paralle
 jobs:
-  # Code Scanning Steps
-  # ...
-  compliance:
+ compliance:
     runs-on: ubuntu-latest
-    # [optional] Run this job after a Code Scanning job
-    # needs:
-    #   - codeql
+ 
+   
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Advance Security Compliance Action
-        uses: GeekMasher/advanced-security-compliance@fix-github-policy
-        with:
-          token: ${{ secrets.OCTODEMOBOT_SECURITY_AND_SOFTWARE_COMPOSITION_TOKEN }}
-          argvs: --debug
+    - name: Advance Security Compliance Action
+      uses: GeekMasher/advanced-security-compliance@v1.5
+      with:
+        token: ${{ secrets.JOHNPAT }}
+        policy: johnjohncom/webinar-2021sep-codeql
+        policy-path: policies/default.yml
+           
