@@ -1,0 +1,22 @@
+name: Compliance with Time to remediate
+
+on:
+ 
+  workflow_dispatch:
+
+jobs:
+  license-compliance:
+    name: Compliance with time to remediate
+    runs-on: ubuntu-latest
+    
+    steps:
+    # - name: Checkout repository
+    #  uses: actions/checkout@v2
+
+    - name: Advance Security Compliance Action
+      uses: GeekMasher/advanced-security-compliance@v1.5
+      with:
+         token: ${{ secrets.JOHNPAT }}
+         policy: johnjohncom/ghas-policy-as-code
+         policy-path: policies/default_timetoremediate.yml
+        # argvs: '--disable-secret-scanning --disable-code-scanning'
