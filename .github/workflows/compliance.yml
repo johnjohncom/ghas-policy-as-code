@@ -18,6 +18,6 @@ jobs:
       uses: GeekMasher/advanced-security-compliance@v1.5
       with:
         token: ${{ secrets.JOHNPAT }}
-        policy: johnjohncom/webinar-2021sep-codeql
+        policy: johnjohncom/ghas-policy-as-code
         policy-path: policies/default.yml
            
