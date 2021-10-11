@@ -19,5 +19,5 @@ jobs:
       with:
          token: ${{ secrets.JOHNPAT }}
          policy: johnjohncom/ghas-policy-as-code
-         policy-path: policies/licensing.yml
+         policy-path: policies/license.yml
          argvs: '--disable-secret-scanning --disable-code-scanning'
