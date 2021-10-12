@@ -90,5 +90,6 @@ jobs:
     - name: Advance Security Compliance Action
       uses: GeekMasher/advanced-security-compliance@v1.5
       with:
+        token: ${{ secrets.JOHNPAT }}
         policy: johnjohncom/ghas-policy-as-code
         policy-path: policies/default.yml
