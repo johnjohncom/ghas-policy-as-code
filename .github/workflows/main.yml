@@ -1,0 +1,23 @@
+name: Compliance-Typosquatting
+
+on:
+ 
+  workflow_dispatch:
+
+jobs:
+  license-typosquatting:
+    name: Typosquatting
+    runs-on: ubuntu-latest
+
+    
+    steps:
+    # - name: Checkout repository
+    #  uses: actions/checkout@v2
+
+    - name: Advance Security Compliance Action
+      uses: GeekMasher/advanced-security-compliance@v1.5
+      with:
+         token: ${{ secrets.JOHNPAT }}
+         policy: johnjohncom/ghas-policy-as-code
+         policy-path: policies/check_typosquatting.yml
+         argvs: '--disable-secret-scanning --disable-code-scanning'
