@@ -20,4 +20,4 @@ jobs:
          token: ${{ secrets.JOHNPAT }}
          policy: johnjohncom/ghas-policy-as-code
          policy-path: policies/check_typosquatting.yml
-         argvs: '--disable-secret-scanning --disable-code-scanning --disable-dependabot'
+         argvs: '--disable-secret-scanning --disable-code-scanning --disable-dependabot --disable-dependency-licensing'
