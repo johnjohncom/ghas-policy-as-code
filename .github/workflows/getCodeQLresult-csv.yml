@@ -1,0 +1,28 @@
+name: Get Codde Scanning result to csv
+
+on:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Get_Code_scan_result_to_csv:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    permissions:
+      actions: read
+      contents: read
+      security-events: read
+   
+   # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+     - name : getResult and csv
+       uses : son7211/GetCodeScanning_result-to-csv@master
+       with :
+        github_token : ${{ secrets.GITHUB_TOKEN }}
+
+     - name: upload 
+       uses: actions/upload-artifact@v2
+       with:
+          name: file
+          path: result.csv
